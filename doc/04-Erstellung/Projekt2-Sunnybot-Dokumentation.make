@@ -1,0 +1,1 @@
+pandoc --from markdown --template eisvogel --filter pandoc-latex-environment --filter pandoc-include --listing --citeproc -o ./../Projekt2-Sunnybot-Dokumentation.pdf Projekt2-Sunnybot-Dokumentation.md

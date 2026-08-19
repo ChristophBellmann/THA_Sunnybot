@@ -1,0 +1,7 @@
+# ignore all hidden files files
+.*
+# but not this file
+!/.gitignore
+# Python caches
+__pycache__/
+*.pyc

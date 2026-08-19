@@ -1,0 +1,44 @@
+author: [Christian Gross, Felix Schirmer, Christoph Bellmann]
+date: Juli 2024
+subject: Vorlage der Dokumentation bei den Dozenten
+keywords: [Useless Machine, Roboter, Bewegung]
+subtitle:  |
+  | Hochschule Augsburg - Systems Engineering - SoSe 24 - Projekt 2
+abstract: |
+  | Useless Machine - Ein Gerät was sich selbst wieder ausschaltet, nachdem es eingeschaltet wird. Dieses Gerät ist ein Roboter, welcher anfängt zur nächsten Lichtquelle zu fahren, wenn ihm eine Lichtquelle über ihm weggenommen wird. Es handelt sich um einen selbstfahrenden Roboter, welcher sich in Abhängigkeit von seiner Umgebung bewegt.
+lang: "de"
+titlepage: true
+titlepage-text-color: "153133"
+titlepage-rule-color: "153133"
+titlepage-rule-height: 2
+titlepage-logo: ./../02-Bilder/logo1_cropped.pdf
+logo-width: 80mm
+fontfamily: bera
+fontsize: 11pt
+bibliography: Projekt2-Sunnybot-Dokumentation-Zitate_Quellen.bib
+csl: csl/ieee-with-url.csl
+toc: true
+lot: true
+lof: true
+
+header-includes:
+- |
+  ```{=latex}
+  \usepackage{tcolorbox}
+  \usepackage{awesomebox}
+
+  \newtcolorbox{info-box}{colback=cyan!5!white,arc=0pt,outer arc=0pt,colframe=cyan!60!black}
+  \newtcolorbox{warning-box}{colback=orange!5!white,arc=0pt,outer arc=0pt,colframe=orange!80!black}
+  \newtcolorbox{error-box}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
+
+  ```
+pandoc-latex-environment:
+  tcolorbox: [box]
+  info-box: [infobox]
+  warning-box: [warningbox]
+  error-box: [errorbox]
+  noteblock: [note]
+  tipblock: [tip]
+  warningblock: [warningblock]
+  cautionblock: [cautionblock]
+  importantblock: [importantblock]

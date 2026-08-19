@@ -1,0 +1,155 @@
+<MyRoot>:
+    display_emotion: display_emotion
+    display_direction: display_direction
+    image_display: image_display
+    camera_display: camera_display
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "SunSeeker"
+            font_name: 'UniFont'
+            font_size: 32
+            color: 0.212, 0.129, 0.961, 1
+            size_hint: None, None
+            size: self.texture_size
+            pos_hint: {'center_x': 0.5}
+
+        Widget:
+            id: separator
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            canvas:
+                Color:
+                    rgb: 0., 2., 0.
+                Rectangle:
+                    pos: separator.center_x - 100, separator.center_y
+                    size: 200, 5
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 400
+
+            Camera:
+                id: camera_display
+                resolution: (640, 480)
+                play: True
+                size_hint: 0.5, 1
+                allow_stretch: True
+
+            Image:
+                id: image_display
+                size_hint: 0.5, 1
+                allow_stretch: True
+
+        Widget:
+            id: separator
+            canvas:
+                Color:
+                    rgb: 1., 0., 0.
+                Rectangle:
+                    pos: 0, separator.center_y
+                    size: separator.width, 2
+
+        Label:
+            id: display_emotion
+            text: ":)"
+            font_name: 'UniFont'
+            font_size: 128
+            size_hint: None, None
+            size: self.texture_size
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        Widget:
+            id: separator
+            canvas:
+                Color:
+                    rgb: 1., 0., 0.
+                Rectangle:
+                    pos: 0, separator.center_y
+                    size: separator.width, 2
+
+        Label:
+            id: display_direction
+            text: "↑"
+            font_name: 'UniFont'
+            font_size: 128
+            size_hint: None, None
+            size: self.texture_size
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        Widget:
+            id: separator
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            canvas:
+                Color:
+                    rgb: 0., 2., 0.
+                Rectangle:
+                    pos: separator.center_x - 100, separator.center_y
+                    size: 200, 5
+
+        BoxLayout:
+            size_hint_y: None
+            height: self.minimum_height
+            padding: [20, 10]
+
+            Button:
+                text: 'show transmission file content'
+                font_name: 'UniFont'
+                font_size: 48
+                color: 0.92, 0.45, 0, 1
+                size_hint_x: 0.8
+                size_hint_y: None
+                height: 50
+                pos_hint: {'center_x': 0.5}
+                on_release: root.show_textfile_click()
+
+            Button:
+                text: 'show processing file content'
+                font_name: 'UniFont'
+                font_size: 48
+                color: 0.92, 0.45, 0, 1
+                size_hint_x: 0.8
+                size_hint_y: None
+                height: 50
+                pos_hint: {'center_x': 0.5}
+                on_release: root.show_processing_file_click()
+
+        BoxLayout:
+            size_hint_y: None
+            height: self.minimum_height
+            padding: [20, 10]
+
+            Button:
+                text: 'fullscreen emotion'
+                font_name: 'UniFont'
+                font_size: 48
+                color: 0.92, 0.45, 0, 1
+                size_hint_x: 0.8
+                size_hint_y: None
+                height: 50
+                pos_hint: {'center_x': 0.5}
+                on_release: root.show_fullscreen_emotion()
+
+            Button:
+                text: 'switch camera'
+                font_name: 'UniFont'
+                font_size: 48
+                color: 0.92, 0.45, 0, 1
+                size_hint_x: 0.8
+                size_hint_y: None
+                height: 50
+                pos_hint: {'center_x': 0.5}
+                on_release: root.switch_camera()
+
+            Button:
+                text: 'show cv text'
+                font_name: 'UniFont'
+                font_size: 48
+                color: 0.92, 0.45, 0, 1
+                size_hint_x: 0.8
+                size_hint_y: None
+                height: 50
+                pos_hint: {'center_x': 0.5}
+                on_release: root.show_cv_text_popup()
