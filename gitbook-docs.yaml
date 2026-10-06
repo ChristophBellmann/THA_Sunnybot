@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Sunnybot: Die Motte
+  structure:
+    - type: space
+      key: sunnybot
+      title: Sunnybot: Die Motte
+      path: docs
+      default: true
+      content:
+        directory: ./docs
